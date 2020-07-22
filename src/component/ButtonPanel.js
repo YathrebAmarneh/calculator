@@ -9,6 +9,10 @@ export default class ButtonPanel extends React.Component {
     clickHandler: PropTypes.func,
   };
 
+  /*handleClick = buttonName => {      // <ButtonPanel clickHandler={this.handleClick} />
+    this.setState(calculate(this.state, buttonName));
+  };*/
+
   handleClick = buttonName => {
     this.props.clickHandler(buttonName);
   };
@@ -17,10 +21,10 @@ export default class ButtonPanel extends React.Component {
     return (
       <div className="component-button-panel">
         <div>
-          <Button name="AC" clickHandler={this.handleClick} />
+          <Button name="c" clickHandler={this.handleClick} />
           <Button name="+/-" clickHandler={this.handleClick} />
           <Button name="%" clickHandler={this.handleClick} />
-          <Button name="÷" clickHandler={this.handleClick} orange />
+          <Button name="/" clickHandler={this.handleClick} orange />
         </div>
         <div>
           <Button name="7" clickHandler={this.handleClick} />
@@ -35,7 +39,7 @@ export default class ButtonPanel extends React.Component {
           <Button name="-" clickHandler={this.handleClick} orange />
         </div>
         <div>
-          <Button name="1" clickHandler={this.handleClick} />
+          <Button name="1" clickHandler={this.handleClick} />  
           <Button name="2" clickHandler={this.handleClick} />
           <Button name="3" clickHandler={this.handleClick} />
           <Button name="+" clickHandler={this.handleClick} orange />
